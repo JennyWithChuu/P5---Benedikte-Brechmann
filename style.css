@@ -1,0 +1,52 @@
+/* Main setup start */
+    body {
+        max-width: 1200px;
+        margin: 0 auto; 
+    }
+
+    :root {
+        /* Colors */
+        --primary-color: #E30613;
+        --secundary-color: #E8F1F8;
+        --black-color: #1D1D1B;
+        --grey-color: #dadada;
+        --white-color: #ffffff; 
+
+        /* Cornor radius */
+        --cornor-radius: 12px;
+
+        /* Spacing */
+        --spacing-small: 12px;
+        --spacing-medium: 24px;
+        --spacing-large: 36px;
+    }
+
+    .primary-button {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        padding: var(--spacing-small);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        border-radius: var(--cornor-radius);
+    }
+
+    .primary-button:hover {
+        background-color: #96171A;
+    }
+
+    .secundary-button {
+        background-color: var(--white-color);
+        color: var(--primary-color);
+        border: solid 2px var(--primary-color);
+        padding: var(--spacing-small);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 600;
+        border-radius: var(--cornor-radius);
+    }
+
+    .secundary-button:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    /* Main setup end */
