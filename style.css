@@ -16,9 +16,14 @@
         --cornor-radius: 12px;
 
         /* Spacing */
-        --spacing-small: 12px;
-        --spacing-medium: 24px;
-        --spacing-large: 36px;
+        --spacing-small: 24px;
+        --spacing-medium: 32px;
+        --spacing-large: 40px;
+
+        /* Font sizes */
+        --font-size-small: 18px;
+        --font-size-medium: 24px;
+        --font-size-large: 36px;
     }
 
     .primary-button {
@@ -50,3 +55,49 @@
     }
 
     /* Main setup end */
+ 
+
+    /* Header start */
+    header {
+        margin: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small)
+        }
+
+    .header__logo {
+        float: left;
+        width: 30%;
+        min-width: 150px;
+        max-width: 250px;
+    }
+    /* Header end */
+
+    /* Navigation start */
+    nav {
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        padding-top: 10px;
+        justify-content: space-evenly;
+    }
+
+    .nav {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__icon {
+        color: var(--white-color);
+        font-size: var(--font-size-medium);
+    }
+
+    .nav__title {
+        color: var(--white-color);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: var(--font-size-small);
+    }
+    /* Navigation end */
