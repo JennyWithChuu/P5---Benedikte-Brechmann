@@ -1,34 +1,35 @@
 /* Main setup start */
     body {
         max-width: 1200px;
-        margin: 0 0 100px 0; 
+        margin: 60px 0 100px 0; 
     }
 
     :root {
-        /* Colors */
+    /* Colors */
         --primary-color: #E30613;
         --secundary-color: #E8F1F8;
         --black-color: #1D1D1B;
         --grey-color: #dadada;
         --white-color: #ffffff; 
 
-        /* Cornor radius */
+    /* Cornor radius */
         --cornor-radius: 12px;
 
-        /* Spacing */
+    /* Spacing */
+        --spacing-xsmall: 12px;
         --spacing-small: 24px;
         --spacing-medium: 32px;
         --spacing-large: 40px;
 
         --spacing-margin: 20px;
 
-        /* Font sizes */
+    /* Font sizes */
         --font-size-small: 18px;
         --font-size-medium: 24px;
         --font-size-large: 36px;
     }
 
-    /* text styles */
+/* text styles */
     body {
         font-family: "Open Sans", sans-serif;
         font-size: 1.125rem;
@@ -61,14 +62,19 @@
         margin: 0;
     }
 
-    /* buttons */
+/* buttons */
     .primary-button {
         background-color: var(--primary-color);
         color: var(--white-color);
-        padding: var(--spacing-small);
+        padding: 12px;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
+        font-size: var(--font-size-small);
         border-radius: var(--cornor-radius);
+        width: max-content;
+        height: max-content;
+        border: none;
+        margin-top: var(--spacing-small);
     }
 
     .primary-button:hover {
@@ -98,12 +104,16 @@
         grid-template-rows: auto 1fr;
     }
 
-    /* Main setup end */
+ /* Main setup end */
  
 
-    /* Header start */
+ /* Header start */
     header {
-        margin: var(--spacing-small) var(--spacing-small) 0 var(--spacing-small)
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--white-color);
         }
 
     .header__logo {
@@ -111,10 +121,11 @@
         width: 20%;
         min-width: 125px;
         max-width: 250px;
+        margin: var(--spacing-small) var(--spacing-small) 12px var(--spacing-small);
     }
-    /* Header end */
+/* Header end */
 
-    /* Navigation start */
+/* Navigation start */
     nav {
         background-color: var(--primary-color);
         display: flex;
@@ -146,28 +157,41 @@
         font-weight: 400;
         font-size: var(--font-size-small);
     }
-    /* Navigation end */
+/* Navigation end */
 
-    /* Side hero start */
-    .hero {
+/* Side hero start */
+    .intro {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: var(--spacing-medium);
         margin: 0 var(--spacing-margin) 0 var(--spacing-margin);
     }
 
-    .hero__image {
+    .intro__image {
         width: 100%;
+        max-width: 350px;
         border-radius: var(--cornor-radius);
         margin-top: var(--spacing-large);
     }
 
-    .hero__text {
+    .intro__text-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .intro__text {
         margin-top: var(--spacing-small);
     }
-    /* Side hero end */
 
-    /* Blog start */
+    .intro__content {
+        margin-top: var(--spacing-xsmall);
+    }
+
+/* Side hero end */
+
+/* Blog start */
     .blog {
         display: flex;
         flex-direction: row;
@@ -197,4 +221,86 @@
         color: var(--black-color);
     }
 
-    /* Blog end */
+/* Blog end */
+
+/* Trin start */
+
+    .progressbar {
+        display: block;
+        width: 100%;
+        max-width: 330px;
+        margin: var(--spacing-medium) auto 0 auto;
+    }
+
+    /* Tjekliste start*/
+    .tjekliste {
+        margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .tjekliste__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /* Gemmer den originale checkbox som er default i HTML */
+    .tjekliste__item__hide-box {
+        display: none;
+    }
+
+    /* Vores ejen checkbox vi selv har lavet */
+    .tjekliste__item__checkmark {
+        display:inline-flex;
+        width: 16px;
+        height: 16px;
+        background-color: var(--white-color);
+        outline: solid 2px var(--primary-color);
+        border-radius: 4px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: 5px;
+    }
+
+    /* Når checkboxen er tjekket, så ændres farven på vores egen checkbox */
+    .tjekliste__item__hide-box:checked ~ .tjekliste__item__checkmark {
+        background-color: var(--primary-color);
+    }
+
+    /* Flueben vises ikke når checkboxen ikke er tjekket */
+    .tjekliste__item__checkmark::after { 
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Flueben vises når checkboxen er tjekket */
+    .tjekliste__item__hide-box:checked ~ .tjekliste__item__checkmark::after {
+        display: block;
+    }
+
+    /* Stilen på fluebenet */
+    .tjekliste__item .tjekliste__item__checkmark::after {
+        left: 4px;
+        top: 0px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--white-color);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+
+    .tjekliste__img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: var(--cornor-radius);
+        margin-top: var(--spacing-medium);
+    }
+    /* Tjekliste end */
+
+
+
+/* Trin end */
+    
