@@ -3,7 +3,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding-top: 60px;
-        padding-bottom: 75px;
+        padding-bottom: 50px;
     }
 
     :root {
@@ -356,11 +356,39 @@
     .raadgivning__content {
         margin-top: var(--spacing-xsmall);
     }
-
-
-    /*Rådgivning slut*/
-
-
+    /* Rådgivning slut */
 
 /* Trin end */
     
+/* Køberraadgivning start */
+    .raadgivning-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .raadgivningspakke {
+        margin: var(--font-size-small) var(--spacing-margin) 0 var(--spacing-medium);
+        background-color: var(--secundary-color);
+        border-radius: var(--cornor-radius);
+        padding: var(--spacing-margin);
+        max-width: 400px;
+    }
+
+    .raadgivningspakke__item {
+        margin: var(--spacing-xsmall)
+    }
+
+    .raadgivningspakke__pris {
+        font-size: var(--font-size-medium);
+        padding-bottom: var(--spacing-small);
+    }
+
+    .raadgivningspakke__pris--bold {
+        font-size: var(--font-size-small);
+    }
+    .raadgivningspakke {
+        margin-bottom: var(--spacing-medium);
+    }
+
+/* Køberrådgivning slut */
