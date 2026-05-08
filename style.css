@@ -184,7 +184,7 @@
         margin: 0 var(--spacing-margin) 0 var(--spacing-margin);
     }
 
-    .intro--raadgivning {
+    .intro--big {
         flex-direction: column;
     }
 
@@ -195,7 +195,7 @@
         margin-top: var(--spacing-large);
     }
 
-    .intro__image--raadgivning {
+    .intro__image--big {
         max-width: 500px;
         margin: var(--spacing-large) auto 0 auto;
     }
@@ -406,3 +406,44 @@
     }
 
 /* Køberrådgivning slut */
+
+/* Rejsens overblik */
+
+.trin {
+    margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
+    background-color: var(--secundary-color);
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    height: 130px;
+    border-radius: var(--cornor-radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+}
+
+.trin--end {
+    margin-bottom: var(--spacing-medium);
+}
+
+.trin__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xsmall);
+    width: 75%;
+    margin: auto;
+    color: var(--black-color);
+}
+
+.trin__icon {
+    font-size: 70px;
+    margin: auto 12px auto 0 ;
+}
+
+    /* rådgivning på overbilksiden */
+.raadgivning-container--sekundary {
+    background-color: var(--secundary-color);
+}
+
+.raadgivningspakke--sekundary {
+    background-color: var(--white-color);
+}
