@@ -71,30 +71,36 @@
     .primary-button {
         background-color: var(--primary-color);
         color: var(--white-color);
-        padding: 12px;
+        padding: 10px;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
         font-size: var(--font-size-small);
         border-radius: var(--cornor-radius);
         width: max-content;
         height: max-content;
-        border: none;
+        border: solid 2px var(--primary-color);
         text-decoration: none;
-        margin-top: var(--spacing-small);
+        margin-top: var(--spacing-xsmall);
     }
 
     .primary-button:hover {
         background-color: #96171A;
+        border: solid 2px #96171A;
     }
 
     .secundary-button {
         background-color: var(--white-color);
         color: var(--primary-color);
         border: solid 2px var(--primary-color);
-        padding: var(--spacing-small);
+        padding: 10px;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
         border-radius: var(--cornor-radius);
+        font-size: var(--font-size-small);
+        width: max-content;
+        height: max-content;
+        text-decoration: none;
+        margin-top: var(--spacing-xsmall);
     }
 
     .secundary-button:hover {
@@ -407,7 +413,7 @@
 
 /* Køberrådgivning slut */
 
-/* Rejsens overblik */
+/* Rejsens overblik start */
 
 .trin {
     margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
@@ -447,3 +453,57 @@
 .raadgivningspakke--sekundary {
     background-color: var(--white-color);
 }
+
+/* Rejsens overblik slut */
+
+/* login start */
+.login-body {
+    margin: var(--spacing-large) var(--spacing-margin) auto var(--spacing-margin);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+}
+
+.login-logo {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.login-titel {
+    margin: auto;
+}
+
+.login {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login__label {
+    margin-top: var(--spacing-xsmall);
+}
+
+.login__input {
+    margin-top: var(--spacing-xsmall);
+    padding: var(--spacing-xsmall);
+    font-size: var(--font-size-small);
+    color: var(--black-color);
+    border: solid 2px var(--primary-color);
+    border-radius: var(--cornor-radius);
+}
+
+.login__glemt-kode {
+    margin-top: 6px;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.login__button {
+    margin-top: var(--spacing-small);
+}
+
+/* login slut*/

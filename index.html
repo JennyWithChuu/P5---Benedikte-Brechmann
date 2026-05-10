@@ -21,10 +21,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     </head>
-    <body>
-        <header>
-            <button class="secundary-button">test</button>
-        </header>
+    <body class="login-body">
+        <img src="image/logo.webp" alt="Benedikte Brechmann" class="login-logo">
+        <h1 class="login-titel">Din købsguide</h1>
+
+      <form class="login">
+            <label for="email" class="login__label"> E-mail:</label>
+            <input type="email" name="email" class="login__input" placeholder="Indtast e-mail">
+
+            <label for="password" class="login__label"> Adgangskode:</label>
+            <input type="password" name="password" class="login__input" placeholder="Indtast adgangskode">
+            <a href="#" class="login__glemt-kode">Glemt kode?</a>
+
+            <button type="submit" class="primary-button login__button">Log ind</button>
+            <button type="button" class="secundary-button login__button">Opret konto</button>
+        </form>
 
     </body>
 </html>
