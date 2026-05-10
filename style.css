@@ -123,7 +123,8 @@
     header {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         width: 100%;
         max-width: 1200px;
         background-color: var(--white-color);
@@ -182,6 +183,10 @@
 /* Navigation end */
 
 /* Side hero start */
+    main {
+        margin: auto;
+    }
+    
     .intro {
         display: flex;
         flex-direction: row;
@@ -220,6 +225,12 @@
 
     .intro__content {
         margin-top: var(--spacing-xsmall);
+    }
+
+    @media (min-width: 920px) {
+        .intro {
+            margin-top: var(--spacing-large);
+        }
     }
 
 /* Side hero end */
@@ -342,8 +353,13 @@
     /* Tjekliste end */
 
     /* Rådgivning start */
-    .raadgivning {
+    .raadgivning-background {
         background-color: var(--secundary-color);
+    }
+
+    .raadgivning {
+        margin: auto;
+        max-width: 885px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -390,7 +406,7 @@
     }
 
     .raadgivningspakke {
-        margin: var(--font-size-small) var(--spacing-margin) 0 var(--spacing-medium);
+        margin: var(--spacing-small) var(--spacing-margin) var(--spacing-medium) var(--spacing-medium);
         background-color: var(--secundary-color);
         border-radius: var(--cornor-radius);
         padding: var(--spacing-margin);
@@ -410,136 +426,152 @@
     .raadgivningspakke__pris--bold {
         font-size: var(--font-size-small);
     }
-    .raadgivningspakke {
-        margin-bottom: var(--spacing-medium);
+    
+    @media (min-width: 980px) {
+        .raadgivningspakke {
+            margin: var(--spacing-small) auto var(--spacing-large) auto;
+        }
+        
     }
 
 /* Køberrådgivning slut */
 
 /* Rejsens overblik start */
 
-.trin {
-    margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
-    background-color: var(--secundary-color);
-    display: flex;
-    flex-direction: row;
-    max-width: 500px;
-    height: 130px;
-    border-radius: var(--cornor-radius);
-    box-shadow: var(--shadow);
-    text-decoration: none;
-}
+    .intro__text--overblik {
+        margin: auto;
+    }
 
-.trin--end {
-    margin-bottom: var(--spacing-medium);
-}
+    .trinliste {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-medium);
+        margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
+    }
+    .trin {
+        margin: auto;
+        background-color: var(--secundary-color);
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        max-width: 500px;
+        height: 130px;
+        border-radius: var(--cornor-radius);
+        box-shadow: var(--shadow);
+        text-decoration: none;
+    }
 
-.trin__text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xsmall);
-    width: 75%;
-    margin: auto;
-    color: var(--black-color);
-}
+    .trin--end {
+        margin-bottom: var(--spacing-medium);
+    }
 
-.trin__icon {
-    font-size: 70px;
-    margin: auto 12px auto 0 ;
-}
+    .trin__text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xsmall);
+        width: 75%;
+        margin: auto;
+        color: var(--black-color);
+    }
 
-    /* rådgivning på overbilksiden */
-.raadgivning-container--sekundary {
-    background-color: var(--secundary-color);
-}
+    .trin__icon {
+        font-size: 70px;
+        margin: auto 12px auto 0 ;
+    }
 
-.raadgivningspakke--sekundary {
-    background-color: var(--white-color);
-}
+        /* rådgivning på overbilksiden */
+        
+    .raadgivning-container--sekundary {
+        background-color: var(--secundary-color);
+    }
+
+    .raadgivningspakke--sekundary {
+        background-color: var(--white-color);
+    }
 
 /* Rejsens overblik slut */
 
 /* login start */
-.login-body {
-    margin: var(--spacing-large) var(--spacing-margin) auto var(--spacing-margin);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-large);
-}
+    .login-body {
+        margin: var(--spacing-large) var(--spacing-margin) auto var(--spacing-margin);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-large);
+    }
 
-.login-logo {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-}
+    .login-logo {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+    }
 
-.login-titel {
-    margin: auto;
-}
+    .login-titel {
+        margin: auto;
+    }
 
-.login {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-}
+    .login {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
 
-.login__label {
-    margin-top: var(--spacing-xsmall);
-}
+    .login__label {
+        margin-top: var(--spacing-xsmall);
+    }
 
-.login__input {
-    margin-top: var(--spacing-xsmall);
-    padding: var(--spacing-xsmall);
-    font-size: var(--font-size-small);
-    color: var(--black-color);
-    border: solid 2px var(--primary-color);
-    border-radius: var(--cornor-radius);
-}
+    .login__input {
+        margin-top: var(--spacing-xsmall);
+        padding: var(--spacing-xsmall);
+        font-size: var(--font-size-small);
+        color: var(--black-color);
+        border: solid 2px var(--primary-color);
+        border-radius: var(--cornor-radius);
+    }
 
-.login__glemt-kode {
-    margin-top: 6px;
-    font-size: 12px;
-    text-decoration: none;
-    color: var(--black-color);
-}
+    .login__glemt-kode {
+        margin-top: 6px;
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--black-color);
+    }
 
-.login__button {
-    margin-top: var(--spacing-small);
-}
+    .login__button {
+        margin-top: var(--spacing-small);
+    }
 
 /* login slut*/
 
 /* kontakt start */ 
-.kontakt__container {
-    margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--spacing-medium);
-}
+    .kontakt__container {
+        margin: var(--spacing-medium) var(--spacing-margin) 0 var(--spacing-margin);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--spacing-medium);
+    }
 
-.kontakt__link {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xsmall);
-    text-decoration: none;
-}
+    .kontakt__link {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xsmall);
+        text-decoration: none;
+    }
 
-.kontakt__link__icon {
-    margin: auto;
-    font-size: 50px;
-}
+    .kontakt__link__icon {
+        margin: auto;
+        font-size: 50px;
+    }
 
-.kontakt__link__text {
-    color: var(--black-color);
-    margin: auto;
-}
+    .kontakt__link__text {
+        color: var(--black-color);
+        margin: auto;
+    }
 
-.kontakt__link--end {
-    margin-bottom: var(--spacing-medium);
-}
+    .kontakt__link--end {
+        margin-bottom: var(--spacing-medium);
+    }
 
 /* kontakt slut */
