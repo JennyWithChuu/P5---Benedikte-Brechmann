@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     </head>
-    <body>
+    <body class="grid">
         <header>
             <a href="rejsens-overblik.html">
                 <img src="image/logo.webp" alt="Bennedikte Brechmann" class="header__logo">
@@ -29,7 +29,33 @@
         </header>
 
         <main>
-            <h1>Kontakt</h1>
+            <article class="intro">
+                <img src="image/kontakt.webp" alt="En tegning af en som snakker i telefon" class="intro__image">
+                <div class="intro__text-container">
+                    <h1 class="intro__text">Kontakt køberrådgiver</h1>
+                    <p class="intro__content">Noget om at man kan komme i kontakt med dem på mange måder og at det er op til er selv hvordan man ønsker kontakten skal foregå. </p>
+                </div>
+            </article>
+            <section class="kontakt__container">
+                <a href="#" class="kontakt__link">
+                    <i class="fa-solid fa-comment-dots kontakt__link__icon" style="color: #e30613;"></i>
+                    <p class="kontakt__link__text">Vi svarer dig hurtigst muligt</p>
+                </a>
+                <a href="tel:+4530141314" class="kontakt__link">
+                    <i class="fa-solid fa-phone kontakt__link__icon" style="color: #e30613;"></i>
+                    <p class="kontakt__link__text">Tlf: 3014 1314</p>
+                    <p class="kontakt__link__text">Mandag til fredag 8.00 - 16.30</p>
+                </a>
+                <a href="mailto:findhjem@brechmann.dk" class="kontakt__link">
+                    <i class="fa-solid fa-envelope kontakt__link__icon" style="color: #e30613;"></i>
+                    <p class="kontakt__link__text">Findhjem@brechmann.dk</p>
+                </a>
+                <a href="#" class="kontakt__link kontakt__link--end">
+                    <i class="fa-solid fa-location-dot kontakt__link__icon" style="color: #e30613;"></i>
+                    <p class="kontakt__link__text">Se vores adresser og åbningstider</p>
+                </a>
+            </section>
+
         </main>
 
         <nav>
