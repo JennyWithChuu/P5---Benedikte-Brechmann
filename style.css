@@ -284,6 +284,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: var(--spacing-xsmall);
+        justify-content: center;
     }
 
     .tjekliste__item {
@@ -321,6 +322,14 @@
     }
 
     /* Flueben vises ikke når checkboxen ikke er tjekket */
+    .tjekliste {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--spacing-xsmall);
+        align-items: flex-start;
+    }
+
     .tjekliste__item__checkmark::after { 
         content: "";
         position: absolute;
@@ -346,8 +355,19 @@
     .tjekliste__img {
         width: 100%;
         max-width: 350px;
+        height: auto;
         border-radius: var(--cornor-radius);
         margin-top: var(--spacing-medium);
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .tjekliste__button__container {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-medium);
+    }
+
+    .tjekliste--button {
         margin-bottom: var(--spacing-medium);
     }
     /* Tjekliste end */
@@ -355,6 +375,7 @@
     /* Rådgivning start */
     .raadgivning-background {
         background-color: var(--secundary-color);
+        margin-top: var(--spacing-large);
     }
 
     .raadgivning {
@@ -459,6 +480,7 @@
         border-radius: var(--cornor-radius);
         box-shadow: var(--shadow);
         text-decoration: none;
+        padding: var(--spacing-xsmall);
     }
 
     .trin--end {

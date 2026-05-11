@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
     </head>
-    <body>
+    <body class="grid">
         <header>
             <a href="rejsens-overblik.html">
                 <img src="image/logo.webp" alt="Bennedikte Brechmann" class="header__logo">
@@ -29,7 +29,62 @@
         </header>
 
         <main>
-            <h1>Trin 3</h1>
+            <img src="image/trin3.svg" alt="Fremskridtsindikator på trin 1" class="progressbar">
+
+            <article class="intro">
+                <img src="image/trin3.webp" alt="Bygninger med flere opgange" class="intro__image">
+                <div class="intro__text-container">
+                    <h1 class="intro__text">Trin 3: Forhandling af pris og vilkår</h1>
+                    <p class="intro__content">Til sidst finder Bo en skal, der føles rigtig. Den giver en stille fornemmelse af, at her kunne han godt blive.</p>
+                    <p class="intro__content"> Men han er ikke den eneste, der har fået øje på den.</p>
+                    <p class="intro__content">Bo trækker vejret dybt. Det her er ikke helt nemt. Han minder sig selv om at tage det roligt.</p>
+                    <p class="intro__content">Han har forberedt sig og ved, hvad lignende skaller koster. Derfor lægger han et bud.</p>
+                    <p class="intro__content">Det bliver afvist.</p>
+                    <p class="intro__content">Skuffelsen er der, men den er stille. Mere et “nå, okay” end noget dramatisk. Han tænker sig om og justerer – ikke for meget, ikke for lidt, men så det stadig giver mening for ham. </p>
+                    <p class="intro__content">For det handler ikke om at vinde en forhandling. Det handler om at ende et sted, der giver ro.</p>
+                </div>
+            </article>
+
+            <section class="tjekliste">
+                <div class="tjekliste__container">
+                    <h2 class="tjekliste__titel">Tjekliste</h2>
+                    <label class="tjekliste__item">
+                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <span class="tjekliste__item__checkmark"></span> Undersøg markedsprisen på lignende boliger
+                    </label>
+                    <label class="tjekliste__item">
+                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <span class="tjekliste__item__checkmark"></span> Læg en klar strategi for forhandlingerne
+                    </label>
+                    <label class="tjekliste__item tjekliste__item--end">
+                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <span class="tjekliste__item__checkmark"></span> Hold dig inden for budgettet – buddet kan blive accepteret!
+                    </label>
+                    <label class="tjekliste__item tjekliste__item--end">
+                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <span class="tjekliste__item__checkmark"></span> Få evt. en rådgiver ind over
+                    </label>
+                    <div class="tjekliste__button__container">
+                        <a href="trin2.html" class="secundary-button tjekliste--button">Forrige trin</a>
+                        <a href="trin4.html" class="primary-button tjekliste--button">Næste trin</a>
+                    </div>
+                </div>
+                <img src="image/trin3-2.webp" alt="En luftig stue" class="tjekliste__img">
+            </section>
+
+            <article class="raadgivning-background">
+                <div class="raadgivning">
+                    <img src="image/raadgivning.webp" alt="Vi hjælper med personlig rådgivning" class="raadgivning__image">
+                    <div class="raadgivning__text-container">
+                        <h2 class="raadgivning__titel">Har du brug for hjælp?</h2>
+                        <p class="raadgivning__content">Vi hjælper dig trygt gennem hele boligkøbet.</p>
+                        <p class="raadgivning__content">Du får en personlig rådgiver ved din side og betaler først, når boligen er din. Vi hjælper dig, uanset hvor du er i processen.</p>
+                        <p class="raadgivning__content"> <b>Hvorfor køberrådgivning?</b> Ejendomsmægleren repræsenterer sælger. Vi repræsenterer dig.</p>
+                        <a href="raadgivning.html" class="primary-button">Se mulighederne</a>
+                    </div>
+                </div>
+            </article>
+
         </main>
 
         <nav>
