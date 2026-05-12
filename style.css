@@ -474,7 +474,7 @@
         background-color: var(--secundary-color);
         display: flex;
         flex-direction: row;
-        width: 70%;
+        width: 80%;
         max-width: 500px;
         height: 130px;
         border-radius: var(--cornor-radius);
