@@ -15,7 +15,7 @@
         --white-color: #ffffff; 
 
     /* Cornor radius */
-        --cornor-radius: 12px;
+        --cornor-radius: 8px;
 
     /* Spacing */
         --spacing-xsmall: 12px;
@@ -31,7 +31,7 @@
         --font-size-large: 36px;
 
     /* Skygger */
-        --shadow: 0px 4px 8px #949494;
+        --shadow: 4px 4px 8px #00000026;
     }
 
 /* text styles */
@@ -252,6 +252,10 @@
         flex-direction: column;
         gap: var(--spacing-small);
         box-shadow: var(--shadow);
+    }
+
+    .blog__item--end {
+        margin-bottom: var(--spacing-large);
     }
 
     .blog__item__img {
