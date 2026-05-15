@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="style.css">
 
         <!-- JavaScript links -->
+         <script defer src="status.js"></script>
 
 
         <!-- Font Awesome ikoner-->
@@ -49,15 +50,15 @@
                 <div class="tjekliste__container">
                     <h2 class="tjekliste__titel">Tjekliste</h2>
                     <label class="tjekliste__item">
-                        <input type="checkbox" class="tjekliste__item__hide-box" checked>
+                        <input type="checkbox" class="tjekliste__item__hide-box" data-list="trin1" data-task="budget">
                         <span class="tjekliste__item__checkmark"></span> Lav et langsigtet, realistisk og holdbart budget
                     </label>
                     <label class="tjekliste__item">
-                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <input type="checkbox" class="tjekliste__item__hide-box" data-list="trin1" data-task="laanegodkendelse">
                         <span class="tjekliste__item__checkmark"></span> Få en lånegodkendelse
                     </label>
                     <label class="tjekliste__item tjekliste__item--end">
-                        <input type="checkbox" class="tjekliste__item__hide-box">
+                        <input type="checkbox" class="tjekliste__item__hide-box" data-list="trin1" data-task="prioriteringer">
                         <span class="tjekliste__item__checkmark"></span> Udarbejd en liste med behov, ønsker og prioriteringer
                     </label>
                     <a href="trin2.html" class="primary-button tjekliste--button">Næste trin</a>
