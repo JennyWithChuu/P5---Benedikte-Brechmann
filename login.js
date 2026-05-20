@@ -74,4 +74,10 @@ function login() {
             message.innerText = "";
         }
     }, 2000);
+
+     let passwordField = document.querySelector('input[name="password"]');
+
+    // Sætter beskeden under password feltet
+    passwordField.parentNode.insertBefore(message, passwordField.nextSibling);
+
 }
