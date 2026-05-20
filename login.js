@@ -53,7 +53,7 @@ function login() {
     let button = document.querySelector(".login__button");
     button.parentNode.insertBefore(message, button.nextSibling);
 
-    // Login validation
+  
     if (loginSuccess) {
 
         message.innerText = "Du er logget ind!";
@@ -65,7 +65,7 @@ function login() {
 
     } else {
 
-        message.innerText = "Forkert adgangskode eller brugernavn";
+        message.innerText = "Forkert email eller adgangskode";
         message.style.color = "red";
     }
 
@@ -77,7 +77,7 @@ function login() {
 
      let passwordField = document.querySelector('input[name="password"]');
 
-    // Sætter beskeden under password feltet
+    // Tekst flyttet
     passwordField.parentNode.insertBefore(message, passwordField.nextSibling);
 
 }
