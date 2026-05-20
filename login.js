@@ -1,4 +1,4 @@
-//[navn] js kode 
+//[navn] js kode login
 //inspireret af youtube video:"Login form validation using javascript" https://www.youtube.com/watch?v=NyM4MCX2eIo
 // Brugt AI til hjælp: [Ai], Prompts ligger inde på afleveringsmapppen/ dokumentet
 // W3 Schools: 
@@ -11,7 +11,7 @@ function login() {
     let username = usernameInput.value;
     let password = passwordInput.value;
 
-    // Standard login 
+    // login 
     let correctUsername = "test";
     let correctPassword = "123";
 
