@@ -12,7 +12,7 @@ function login() {
     let password = passwordInput.value;
 
     // login 
-    let correctUsername = "test";
+    let correctUsername = "test@test.dk";
     let correctPassword = "123";
 
     // ARRAY
