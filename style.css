@@ -618,4 +618,22 @@
     text-decoration: underline;
 }
 
+.intro__toggle {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    margin-top: var(--spacing-xsmall);
+
+    display: block;
+    text-align: left;
+}
+
+.intro__toggle:hover {
+    text-decoration: underline;
+}
+
 /* læs mere slut */
