@@ -1,3 +1,7 @@
+// Brugt AI til hjælp: [Ai], Prompts ligger inde på afleveringsmapppen/ dokumentet
+// Derudover er der brugt W3 Schools til hjælp
+
+//Vi henter alle checkbokse fra DOM
 let checkboxes = document.querySelectorAll("input[type='checkbox']")
 
 // array
@@ -105,10 +109,10 @@ let dataChecklist = [
 ];
 
 
-//Gem data 
+//Gem data i LocalStorage
 function saveChecklist(data) {
     const stringified = JSON.stringify(data); //Laver data om til tekst
-    localStorage.setItem("checklistData", stringified); //Gemmer data localt
+    localStorage.setItem("checklistData", stringified); //Gemmer data lokalt i browseren
 };
 
 
@@ -116,7 +120,7 @@ function saveChecklist(data) {
 function loadChecklist() {
     const stored = localStorage.getItem("checklistData"); //Henter data
 
-    // Hvis der IKKE er gemt noget endnu - retuner array 
+    // Hvis der IKKE er gemt noget endnu, bruges default arrayet 
     if (!stored) {
         return dataChecklist;
     }
@@ -129,7 +133,7 @@ let checklistState = loadChecklist();
 
 
 // Hvis der ikke findet noget i localstorage, så gem vores data derinde 
-//Vi sikre at localstorage bliver fyldt - gemmer array til remtidigt brug for brugeren
+//Vi sikre at localstorage bliver fyldt - gemmer array til fremtidigt brug 
 if (!localStorage.getItem("checklistData")) {
     saveChecklist(checklistState);
 }
@@ -138,27 +142,27 @@ if (!localStorage.getItem("checklistData")) {
 //Looper igennem alle checkboxes
 checkboxes.forEach((checkbox) => {
 
-    //Alle checkboxes får en eventlistner på 
+    //Alle checkboxes får en eventlistner på, så når der sker en ændring i checkboxens state, så køres funktionen 
     checkbox.addEventListener("change", () => {
 
         //henter data atributterne fra DOM
         const list = checkbox.dataset.list;
         const task = checkbox.dataset.task;
 
-        // Matcher data attrubutterne med array for hver enkelt checkbox via find()
+        // Find søger efter det objekt i arrayet der matcher både list og task data atributterne fra DOM
         const match = checklistState.find(item =>
             item.liste === list &&
             item.task === task
         );
 
-        //opdater data hvis der er noget 
+        //Hvis der er match opdateres det om checkboxen er checked eller ej i arrayet
         if (match) {
 
             //completed bliver true eller false alt efter checkboxens state
             match.completed = checkbox.checked;
         }
 
-        //Nu gemmer vi arrayet på ny 
+        //Nu gemmer vi arrayet på ny ved at omdanne til tekst
         localStorage.setItem(
             "checklistData",
             JSON.stringify(checklistState)
@@ -169,10 +173,8 @@ checkboxes.forEach((checkbox) => {
     });
 });
 
+// Her gør vi så checkbokesene bliver checked igen efter reload 
 function renderChecklist() {
-
-    //Henter alle checkboxes fra DOM
-    const checkboxes = document.querySelectorAll(".tjekliste__item__hide-box");
 
     //Looper igennem alle checkboxes
     checkboxes.forEach((checkbox) => {
@@ -187,8 +189,7 @@ function renderChecklist() {
             item.task === task
         );
 
-        //Hvis objektet findes sættes checkboxens checked state
-        //ud fra den gemte data i localStorage
+        //Hvis objektet findes sættes checkboxens checked state ud fra den gemte data i localStorage
         if (match) {
             checkbox.checked = match.completed;
         }
@@ -196,6 +197,7 @@ function renderChecklist() {
     });
 }
 
+// Funktion til at opdatere status teksten for hvert trin
 function updateTrinStatus() {
 
     //Henter alle status bokse fra DOM
@@ -210,26 +212,26 @@ function updateTrinStatus() {
         //Filtrere arrayet så vi kun får items fra det specifikke trin
         const items = checklistState.filter(item => item.liste === trin);
 
-        //Finder hvor mange tasks der findes i trinnet totalt
+        //Finder hvor mange opgaver der findes i trinnet totalt
         const total = items.length;
 
-        //Finder hvor mange tasks der er completed = true
+        //Finder hvor mange opgaver der er completed = true
         const completed = items.filter(item => item.completed).length;
 
-        //Variabel til status teksten
+        //Variabel til status teksten - udfyldes via IF statements
         let text = "";
 
-        //Hvis ingen tasks er completed
+        //Hvis ingen opgaver er completed skrives "Ikke startet"
         if (completed === 0) {
             text = "Status: Ikke startet";
         } 
 
-        //Hvis alle tasks er completed
+        //Hvis alle tasks er completed skrives "Færdig"
         else if (completed === total) {
             text = "Status: Færdig";
         } 
 
-        //Hvis nogle tasks er completed
+        //Hvis nogle tasks er completed skrives "I gang"
         else {
             text = "Status: I gang";
         }
@@ -239,12 +241,8 @@ function updateTrinStatus() {
     });
 }
 
-//Når HTML er loaded køres funktionerne automatisk
-window.addEventListener("DOMContentLoaded", () => {
-
-    //Sætter checkboxes state ud fra localStorage data
+    //Vi kalder funktionerne for at sætte checkboxes state localStorage data
     renderChecklist();
 
-    //Sætter status tekster ud fra localStorage data
+    //vi kalder funktionerne for at sætte status tekster ud fra localStorage data
     updateTrinStatus();
-});
