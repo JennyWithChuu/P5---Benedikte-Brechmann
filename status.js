@@ -108,7 +108,6 @@ let dataChecklist = [
     }
 ];
 
-
 //Gem data i LocalStorage
 function saveChecklist(data) {
     const stringified = JSON.stringify(data); //Laver data om til tekst
